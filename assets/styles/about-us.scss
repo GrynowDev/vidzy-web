@@ -1,0 +1,125 @@
+.about-page {
+	.about-banner {
+		@include common-banner('../assets/images/about/about-banner.png');
+	}
+	.content {
+		padding: 40px 0px;
+	}
+	.we-offer {
+		padding: 60px 0px;
+		.we-offer-content {
+			.title {
+				@include title(20px);
+			}
+			.we-offer-flex {
+				display: flex;
+				align-items: flex-start;
+				.icon {
+					margin-right: 14px;
+					width: 36px;
+				}
+				h3 {
+					font-family: 'Work Sans', sans-serif;
+					font-size: 28px;
+					font-weight: 600;
+				}
+				p {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	.why-choose {
+		padding: 40px 0px 70px 0px;
+		h2 {
+			@include title(60px);
+			text-align: center;
+		}
+		.card {
+			background-color: #e8eff3;
+			align-items: center;
+			text-align: left;
+			border: none;
+			border-radius: 32px 22px;
+			margin-bottom: 30px;
+			min-height: 390px;
+			&.card-2 {
+				background-color: #8df0d8;
+			}
+			&.card-3 {
+				background-color: #93e5ff;
+			}
+			&.card-4 {
+				min-height: 200px;
+				background-color: #f9df86;
+			}
+			&.card-5 {
+				min-height: 200px;
+				background-color: #e4d9fb;
+			}
+			.card-content {
+				padding: 20px;
+				> img {
+					margin-bottom: 20px;
+				}
+				.card-title {
+					font-size: 20px;
+					font-weight: 600;
+					color: $primary-color;
+				}
+				.card-desc {
+					font-size: 16px;
+					color: #4c4c4c;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+	.mission-vision {
+		padding: 20px 0px;
+		background-color: #e3f0f2;
+		.mission-vision-content {
+			padding: 60px 0px 40px 0px;
+			.title {
+				font-family: 'Clash Display', sans-serif;
+				font-size: 40px;
+				font-weight: 600;
+				border-left: 6px solid #7c3eff;
+				padding-left: 20px;
+			}
+			.desc {
+				font-size: 18px;
+				font-weight: 400;
+				padding-left: 20px;
+			}
+		}
+		.mission-vision-img {
+			height: 330px;
+			object-fit: contain;
+			width: 100%;
+		}
+	}
+	.values {
+		padding: 60px 0px;
+		.title {
+			@include title(60px);
+		}
+		.card {
+			align-items: center;
+			padding: 30px 0px;
+			border: 1px solid rgb(217, 217, 217);
+			border-radius: 6px;
+			margin-bottom: 30px;
+			img {
+				margin-bottom: 18px;
+			}
+			.card-title {
+				font-weight: 600;
+				font-size: 24px;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+

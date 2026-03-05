@@ -1,0 +1,575 @@
+@import url('http://fonts.cdnfonts.com/css/clash-display');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap');
+@font-face {
+	font-family: 'Clash Grotesk';
+	src: url('../../assets/fonts/clash-grotesk/ClashGrotesk-Regular.ttf'),
+		url('../../assets/fonts/clash-grotesk/ClashGrotesk-Medium.ttf'),
+		url('../../assets/fonts/clash-grotesk/ClashGrotesk-Semibold.ttf'),
+		url('../../assets/fonts/clash-grotesk/ClashGrotesk-Light.ttf'),
+		url('../../assets/fonts/clash-grotesk/ClashGrotesk-Variable.ttf'),
+		url('../../assets/fonts/clash-grotesk/ClashGrotesk-Bold.ttf');
+}
+
+html {
+	scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Clash Display', sans-serif;
+}
+p {
+	font-family: 'Work Sans', sans-serif;
+}
+
+.ml-auto {
+	margin-left: auto !important;
+}
+.fs-16 {
+	font-size: 16px !important;
+}
+.fs-17 {
+	font-size: 17px !important;
+}
+.fs-18 {
+	font-size: 18px !important;
+}
+.fs-19 {
+	font-size: 19px !important;
+}
+.fs-20 {
+	font-size: 20px !important;
+}
+.pr-0 {
+	padding-right: 0 !important;
+}
+
+.primary-btn {
+	font-family: 'Clash Grotesk';
+	background-color: #7c3eff;
+	font-weight: 500;
+	border-radius: 100px;
+	padding: 10px 22px 11px 22px;
+	color: white;
+	border: none;
+	text-decoration: none;
+	&:hover {
+		color: white;
+	}
+	img {
+		width: 12px;
+		margin-left: 4px;
+	}
+}
+.primary-outline-btn {
+	font-family: 'Clash Grotesk';
+	background-color: transparent;
+	font-weight: 500;
+	border-radius: 100px;
+	padding: 8px 22px 9px 22px;
+	color: white;
+	border: 2px solid #8425bb;
+}
+.secondary-btn {
+	@extend .primary-btn;
+	background-color: $primary-color;
+}
+
+@mixin title($mb) {
+	font-family: 'Clash Display', sans-serif;
+	color: $primary-color;
+	font-weight: 500;
+	font-size: 36px;
+	margin-bottom: $mb;
+	text-align: center;
+	@media (max-width: 576px) {
+		font-size: 40px;
+	}
+}
+.info {
+	font-size: 18px;
+	font-weight: 400;
+	font-family: 'Work Sans', sans-serif;
+	color: $primary-color;
+}
+
+#more {
+	display: none;
+}
+
+// common design css of all pages
+.gradient-bg-text {
+	background: url('../../assets/images/home-page/market-bg.webp') no-repeat;
+	padding: 5rem 0px 6rem 0px;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	border-radius: 24px;
+	color: white;
+	.title {
+		font-family: 'Clash Display', sans-serif;
+		font-size: 35px;
+		font-weight: 600;
+		margin-bottom: 4rem;
+		color: white;
+		text-align: center;
+		@media (max-width: 576px) {
+			text-align: left;
+			font-size: 40px;
+		}
+	}
+	.gradient-bg-text-content {
+		display: flex;
+		align-items: center;
+		padding: 30px 0px;
+		border-top: 1px solid rgb(143, 143, 143);
+		&.gradient-bg-border-bottom {
+			border-bottom: 1px solid rgb(143, 143, 143);
+		}
+		.bold {
+			font-weight: 600;
+			font-size: 36px;
+			font-family: 'Clash Display', sans-serif;
+			margin-bottom: 0;
+			padding-right: 6%;
+			@media (max-width: 576px) {
+				font-size: 40px;
+			}
+		}
+		.txt {
+			font-size: 18px;
+			font-weight: 300;
+			margin-bottom: 0;
+			padding-right: 4%;
+			@media (max-width: 576px) {
+				font-size: 16px;
+			}
+		}
+	}
+	.last-line {
+		text-align: center;
+		font-size: 18px;
+		font-weight: 300;
+		padding-top: 30px;
+	}
+}
+
+@mixin client-slider {
+	padding: 40px 0px 60px 0px;
+	.swiper-slide {
+		display: flex;
+		justify-content: center;
+		> img {
+			width: 60px;
+		}
+	}
+}
+
+// form steps
+@mixin steps {
+	padding: 60px 0px;
+	font-family: 'Clash Display', sans-serif;
+	.title {
+		@include title(30px);
+	}
+	.info {
+		@extend .info;
+		padding: 0px 14%;
+		@media (max-width: 576px) {
+			padding: 0;
+		}
+	}
+	.sub-title {
+		font-weight: 28px;
+		color: #636363;
+		font-weight: 500;
+	}
+	.primary-btn {
+		margin-bottom: 4rem;
+	}
+	.card {
+		align-items: center;
+		border-radius: 32px;
+		background: #efefef;
+		min-height: 610px;
+		@media (max-width: 768px) {
+			margin-bottom: 2rem;
+		}
+		@media (max-width: 576px) {
+			margin-bottom: 2rem;
+		}
+		.card-step {
+			background-color: white;
+			padding: 20px;
+			border-radius: 32px;
+			width: 100%;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			.span {
+				color: #ff8225;
+				font-size: 14px;
+				font-weight: 600;
+				display: inline-block;
+				margin-bottom: 20px;
+			}
+			.span-1 {
+				@extend .span;
+			}
+			.span-2 {
+				@extend .span;
+				color: #52c9ef;
+			}
+			.span-3 {
+				@extend .span;
+				color: #40e1ba;
+			}
+		}
+		.card-content {
+			width: 100%;
+			text-align: center;
+			padding: 30px 0px;
+			border-bottom-left-radius: 30px;
+			border-bottom-right-radius: 30px;
+			.card-title {
+				font-size: 24px;
+				font-weight: 500;
+				padding: 0px 8px;
+			}
+			.card-subtitle {
+				padding: 10px 20px;
+				text-align: justify;
+			}
+		}
+	}
+	.last-heading {
+		font-size: 30px;
+		font-weight: 500;
+	}
+	.last-para {
+		font-size: 18px;
+		font-weight: 400;
+	}
+}
+.fill-form-last-bold {
+	font-weight: 600;
+	text-align: center;
+	font-size: 22px;
+	margin-top: 30px;
+}
+.fill-form-last {
+	font-weight: 400;
+	font-size: 18px;
+	text-align: center;
+}
+
+.video-slider-with-tabs {
+	padding: 40px 0px 60px 0px;
+	font-family: 'Clash Display', sans-serif;
+	.title {
+		@include title(20px);
+		padding: 0px 20%;
+		@media (max-width: 576px) {
+			padding: 0;
+		}
+	}
+	.nav {
+		justify-content: center;
+		font-family: 'Clash Display', sans-serif !important;
+		margin: 30px 0px 70px 0px;
+		@media (max-width: 576px) {
+			margin: 20px 40px;
+		}
+		&.nav-tabs {
+			border-bottom: none;
+			font-family: 'Clash Display', sans-serif !important;
+			.nav-item {
+				margin: 0px 30px;
+				@media (max-width: 576px) {
+					margin: 8px 0px;
+				}
+				.nav-link {
+					border-color: transparent;
+					font-family: 'Clash Display', sans-serif !important;
+					font-size: 20px;
+					font-weight: 500;
+					color: $primary-color;
+					&.active {
+						border-bottom: 4px solid $primary-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+@mixin common-banner($bg-url) {
+	background: url($bg-url) no-repeat;
+	height: 400px;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	font-family: 'Clash Grotesk';
+	.banner-title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		h1 {
+			font-size: 44px;
+			text-transform: capitalize;
+			font-weight: 600;
+			color: $primary-color;
+			@media (max-width: 576px) {
+				padding-top: 20px;
+			}
+		}
+	}
+	.about-banner-img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		margin-top: 34px;
+		> img {
+			width: 300px;
+			@media (max-width: 576px) {
+				width: 230px;
+			}
+		}
+	}
+}
+
+.five-cards {
+	padding: 40px 0px 0px 0px;
+	font-family: 'Clash Display', sans-serif;
+	.title {
+		font-size: 24px;
+		font-weight: 500;
+		padding: 0px 4rem;
+		margin-bottom: 6rem;
+		@media (max-width: 576px) {
+			font-size: 30px;
+			padding: 0;
+		}
+	}
+	.desc {
+		font-size: 18px;
+		font-weight: 400;
+		padding: 6px 16%;
+		margin-bottom: 7rem;
+	}
+	.card {
+		align-items: center;
+		background-color: #e9f6ff;
+		border: none;
+		border-radius: 24px;
+		padding: 32px 0px;
+		margin-bottom: 22%;
+		min-height: 190px;
+		@media (max-width: 576px) {
+			margin-bottom: 50%;
+			min-height: 192px;
+		}
+		.card-img {
+			width: 90px;
+			margin-top: -88px;
+			margin-bottom: 30px;
+			@media (max-width: 576px) {
+				margin-bottom: 10px;
+				max-width: 60%;
+				height: auto;
+			}
+		}
+		.card-title {
+			font-size: 24px;
+			text-align: center;
+			padding: 0px 30px;
+			@media (max-width: 576px) {
+				font-size: 18px;
+			}
+		}
+		.card-subtitle {
+			font-size: 18px;
+			text-align: center;
+			padding: 0px 8%;
+		}
+	}
+}
+.card-step {
+	img {
+		height: 80px !important;
+	}
+}
+
+.influencers-video-slider {
+	padding: 40px 0px;
+	@media (max-width: 576px) {
+		padding: 0;
+	}
+	.title {
+		font-family: 'Clash Display', sans-serif;
+		color: $primary-color;
+		font-weight: 600;
+		font-size: 48px;
+		margin-bottom: 30px;
+		@media (max-width: 576px) {
+			font-size: 34px;
+		}
+		> img {
+			@media (max-width: 576px) {
+				display: none;
+			}
+		}
+	}
+	.info {
+		font-size: 18px;
+		font-weight: 400;
+		color: $primary-color;
+		padding: 0px 20%;
+		margin: 20px 0px 40px 0px;
+		@media (max-width: 576px) {
+			padding: 0;
+		}
+	}
+	.tabbable {
+		display: flex;
+		justify-content: center;
+		.nav {
+			@media (max-width: 576px) {
+				max-width: 100%;
+				overflow-x: auto;
+				flex-wrap: nowrap;
+				overflow-y: hidden;
+			}
+		}
+		.nav-tabs {
+			border-bottom: none;
+			margin-bottom: 30px;
+			.nav-link {
+				color: $primary-color;
+				font-size: 20px;
+				font-weight: 400;
+				@media (max-width: 576px) {
+					height: fit-content;
+				}
+				&.active {
+					font-weight: 700;
+					border-color: transparent;
+					border-bottom: 4px solid $primary-color;
+				}
+			}
+		}
+	}
+}
+
+// video slider common css
+.influencers-video-swiper {
+	margin: 0px 0px 20px 0px;
+	position: relative;
+	bottom: 70px;
+	.swiper-slide {
+		margin-right: 0 !important;
+		margin-left: 37px !important;
+		@media (max-width: 576px) {
+			margin-right: 4px !important;
+			margin-left: 6px !important;
+			width: 100% !important;
+		}
+		.video-js {
+			height: 500px !important;
+			max-width: 100%;
+			width: 318px !important;
+			@media (max-width: 576px) {
+				width: 320px !important;
+				margin: 0 auto;
+			}
+		}
+		.brand-logo {
+			text-align: left;
+			position: relative;
+			bottom: -35px;
+			z-index: 3000;
+			left: -15px;
+			@media (max-width: 576px) {
+				left: 12px;
+			}
+			> img {
+				width: 60px;
+			}
+		}
+		.play-video {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			cursor: pointer !important;
+		}
+	}
+	.swiper-button-prev {
+		height: 50px;
+		width: 50px;
+		left: 10px;
+		right: 10px;
+		top: 50%;
+		// @media (max-width: 576px) {
+		// 	display: none;
+		// }
+		&::after {
+			// content: "";
+			// background: url("../../assets/images/home-page/arrow-left.png") no-repeat;
+			display: inline-block;
+			position: absolute;
+			transform: translate(16%, 23%);
+		}
+	}
+	.swiper-button-next {
+		top: 50%;
+		// @media (max-width: 576px) {
+		// 	display: none;
+		// }
+	}
+}
+.vjs-big-play-button {
+	display: none !important;
+}
+.vjs-poster {
+	background-size: cover !important;
+	width: 100% !important;
+	border-radius: 10px !important;
+}
+.video {
+	.my-video-dimensions {
+		height: 360px !important;
+		max-width: 700px !important;
+	}
+}
+.video-js {
+	width: 100% !important;
+	border-radius: 10px !important;
+
+	.vjs-tech {
+		object-fit: cover !important;
+	}
+	.video-overlay {
+		position: absolute;
+		left: 0;
+		top: 0;
+		font-size: 20px;
+		font-family: Helvetica;
+		color: #fff;
+		background-color: rgba(50, 50, 50, 0.8);
+	}
+}
+.vjs-default-skin .vjs-fullscreen-control,
+.vjs-default-skin .vjs-picture-in-picture-control {
+	display: none;
+}
+
+.vjs-default-skin .vjs-volume-control {
+	margin-right: 20px;
+}

@@ -1,0 +1,31 @@
+
+.blog-itam-wraper {
+    background-color: #fff;
+    display: block;
+    border-radius: 14px;
+    height: calc(100% - 30px);
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 6px 12px 3px rgba(33, 121, 203, 0.1);
+    overflow: hidden;
+}
+.blog-itam-wraper figure a {
+    display: block;
+}
+.blog-itam-wraper figure img {
+    width: 100%;
+}
+.blog-itam-wraper-body {
+    padding: 2rem 1.2rem;
+}
+.blog-itam-wraper-body > a {
+    color: #00b2ff;
+    text-decoration:none;
+    font-size:1.1rem;
+}
+.navbar-brand {background-image:url('../assets/images/vidzy-logo.webp');background-size:100%;background-position:0px;}
+.primary-btn.has-arrow:after {background-image: url('../assets/images/btn-arrow.png');background-position: 0px;transform: scale(0.8);margin-left: 5px;}
+figure { margin-bottom:0px;}
+.blog-itam-wraper-body h4 a { font-size: 24px; color: #111822; text-decoration: none; }
+.blog-itam-wraper-body h4 { margin-bottom: 15px; }
+.block-title { text-align:center;}

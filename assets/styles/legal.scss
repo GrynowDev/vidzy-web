@@ -1,0 +1,20 @@
+.legal-page {
+	padding: 50px 0px;
+	h1 {
+		font-size: 32px;
+		font-weight: 600;
+		color: $primary-color;
+	}
+	p {
+		font-size: 18px;
+		font-weight: 400;
+		color: $primary-color;
+	}
+	li {
+		font-family: 'Work Sans', sans-serif;
+		font-size: 18px;
+		margin-bottom: 10px;
+		font-weight: 400;
+		color: $primary-color;
+	}
+}

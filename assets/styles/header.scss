@@ -1,0 +1,61 @@
+header {
+	// font-family: 'Clash Display', sans-serif;
+	.navbar-light {
+		background: transparent !important;
+		.navbar-brand {
+			display: flex;
+			align-items: center;
+			> img {
+				height: 36px;
+			}
+			.logo {
+				color: #270064;
+				font-weight: 600;
+				font-size: 30px;
+			}
+		}
+		.navbar-toggler {
+			border: 2px solid #270064;
+			box-shadow: none;
+		}
+		#navbarNavDropdown {
+			@media (max-width: 576px) {
+				position: absolute;
+				top: 100%;
+				left: -6%;
+				width: 112%;
+				background-color: rgb(255, 255, 255);
+				z-index: 9999;
+			}
+		}
+		.navbar-nav {
+			font-family: 'Clash Grotesk';
+			padding: 16px 0px;
+			align-items: center;
+			@media (max-width: 576px) {
+				align-items: baseline;
+				padding: 16px 14px;
+			}
+			.nav-item {
+				padding: 0px 22px;
+				@media (max-width: 576px) {
+					margin-bottom: 10px;
+					&:last-child {
+						margin-top: 6px;
+					}
+				}
+				.nav-link {
+					color: $primary-color;
+					font-weight: 600;
+					font-size: 20px;
+					text-transform: capitalize;
+					padding: 0;
+					padding-bottom: 4px;
+					&.active {
+						border-bottom: 4px solid $primary-color;
+					}
+				}
+			}
+		}
+	}
+}

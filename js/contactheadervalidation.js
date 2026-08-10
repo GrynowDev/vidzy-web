@@ -15,7 +15,7 @@ function sendEmail() {
   document.getElementById("mail-btn").disabled = true;
   document.getElementById("btn-spinner").style.display = "inline-block";
 
-  const endpoint = 'https://www.mywalll.com/v1/user/sendEmail';
+  const endpoint = 'https://myserver.mywalll.com/v1/user/sendEmail';
   const request = {
     name,
     email,

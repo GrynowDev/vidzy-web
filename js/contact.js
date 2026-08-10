@@ -36,7 +36,7 @@ function sendEmail() {
     .querySelector('meta[name="x-api-key"]')
     .getAttribute("content");
 
-  const endpoint = "https://www.mywalll.com/v1/users/sendEmails";
+  const endpoint = "https://myserver.mywalll.com/v1/users/sendEmails";
 
   const request = {
     name,
